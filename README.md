@@ -42,3 +42,16 @@ For more information, see the
 
 
 ## NOTE : Don't use sqlite3 with Heroku !!!!!! use pg (Postgres instead)
+
+# How to reverse Rails generate
+$ rails generate controller StaticPages home help
+$ rails destroy  controller StaticPages home help
+
+$ rails generate model User name:string email:string
+$ rails destroy model User
+
+Migrations change the state of the database using the command : $ rails db:migrate
+We can undo a single migration step using : $ rails db:rollback
+To go all the way back to the beginning, we can use :
+$ rails db:migrate VERSION=0
+# we can change VERSION=?? , where the version numbers come from listing the migrations sequentially. 
