@@ -56,4 +56,11 @@ To go all the way back to the beginning, we can use :
 $ rails db:migrate VERSION=0
 # we can change VERSION=?? , where the version numbers come from listing the migrations sequentially.
 
-PATCH and DELETE, are designed for updating and destroying things on the remote server 
+PATCH and DELETE, are designed for updating and destroying things on the remote server
+
+# Sometimes, Spring does not close itself
+# We can kill it by
+- ps aux | grep spring , kill -15 pid
+- spring stop
+Sometimes this doesn’t work, though, and you can kill all the processes with name spring using the pkill command as follows:
+- pkill -15 -f spring
