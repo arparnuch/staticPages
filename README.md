@@ -58,6 +58,17 @@ $ rails db:migrate VERSION=0
 
 PATCH and DELETE, are designed for updating and destroying things on the remote server
 
+# To make rails s more read-able
+In test/test_helper.rb
+
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/environment', __FILE__)
+require 'rails/test_help'
+require "minitest/reporters"    ## Add this line
+Minitest::Reporters.use!        ## Add this line
+
+
+
 # Sometimes, Spring does not close itself
 # We can kill it by
 - ps aux | grep spring , kill -15 pid
