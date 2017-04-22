@@ -54,4 +54,6 @@ Migrations change the state of the database using the command : $ rails db:migra
 We can undo a single migration step using : $ rails db:rollback
 To go all the way back to the beginning, we can use :
 $ rails db:migrate VERSION=0
-# we can change VERSION=?? , where the version numbers come from listing the migrations sequentially. 
+# we can change VERSION=?? , where the version numbers come from listing the migrations sequentially.
+
+PATCH and DELETE, are designed for updating and destroying things on the remote server 
